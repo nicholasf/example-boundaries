@@ -4,7 +4,7 @@ This is a simplified layout for a project structure we are currently evaluating.
 
 Our main goal is to separate implementation logic from communication logic. Put another way, we may want to use services down the line, so web frameworks, protocols like HTTP (etc) must all be abstracted away from the implementation of business logic.
 
-For this we have the following concepts *boundaries* - interfaces wrapping business logic. They represent "bounded contexts" (SOA speech) in our app. You might also call them 'concerns', 'components'. There are many synonyms.
+For this we have a *boundaries* concept - interfaces wrapping business logic. They represent "bounded contexts" (SOA speech) in our app. You might also call them 'concerns', 'components'. They might one day become distributed services, talking to each other. There are many synonyms.
 
 Each boundary is implemented in its own package, which has the following structure:
 
