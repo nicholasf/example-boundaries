@@ -6,8 +6,8 @@ import (
 	"github.com/nicholasf/example/users"
 )
 
-func NewHouses() boundaries.Houses {
-	return houses.NewHouses()
+func NewHouses(users boundaries.Users) boundaries.Houses {
+	return houses.NewHouses(users)
 }
 
 func NewUsers() boundaries.Users {

@@ -2,6 +2,8 @@ package main
 
 import(
 	"github.com/nicholasf/example/boundaries"
+	"github.com/nicholasf/example/boundaries/factories"
+	"github.com/gin-gonic/gin"
 )
 
 type ExampleApp interface {
@@ -9,20 +11,18 @@ type ExampleApp interface {
 	Users() boundaries.Users
 }
 
-type exampleApp struct{
+type exampleApp struct {
 	houses boundaries.Houses
 	users boundaries.Users
 }
 
-func ExampleApp() ExampleApp {
-	pim := factories.NewPIM()
-	merchandising := factories.NewMerchandising()
-	pim.SetMerchandising(merchandising)
-	merchandising.SetPIM(pim)
+func NewExampleApp() ExampleApp {
+	users := factories.NewUsers()
+	houses := factories.NewHouses(users)
 
-	return &foxComm{
-		merchandising: merchandising,
-		pim: pim,
+	return &exampleApp{
+		houses: houses,
+		users: users,
 	}
 }
 
@@ -32,4 +32,26 @@ func (f *exampleApp) Houses() boundaries.Houses {
 
 func (f *exampleApp) Users() boundaries.Users {
 	return f.users
+}
+
+func main() {
+	example := NewExampleApp()
+
+	err := example.Users().CreateUser("Joe")
+
+	if err != nil {
+		panic(err)
+	}
+
+	err = example.Houses().CreateHouse("21 Jump Street", "Joe")
+
+	if err != nil {
+		panic(err)
+	}
+
+	r := gin.New()
+	rg := r.Group("/")
+	rg = MapRoutes(rg, example)
+
+	r.Run(":8000")
 }

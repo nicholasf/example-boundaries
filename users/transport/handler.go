@@ -7,7 +7,7 @@ import (
 )
 
 func MapRoutes(r *gin.RouterGroup, u boundaries.Users) *gin.RouterGroup {
-	r.GET("/house", Resource(u))
+	r.GET("/user/:name", Resource(u))
 
 	return r
 }

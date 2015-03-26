@@ -6,5 +6,5 @@ import (
 
 type House struct {
 	Address string `json:"address"`
-	Owner userModels.User `json:"owner"`
+	Owner *userModels.User `json:"owner"`
 }
