@@ -8,10 +8,13 @@ For this we have the following concepts *boundaries* - interfaces wrapping busin
 
 Each boundary is implemented in its own package, which has the following structure:
 
+```
 houses/
     context/
     transport/
     boundary.go
+```
+
 
 The *boundary.go* file holds the implementation of the business rules for the boundary. In reality, it should probably just make calls into the context.
 
@@ -28,9 +31,8 @@ With this separation we should be able to swap out Gin for another framework, ea
 
 Try the following requests:
 
-http://localhost:8000/user/Joe
-
-http://localhost:8000/house/21%20Jump%20Street
+* http://localhost:8000/user/Joe
+* http://localhost:8000/house/21%20Jump%20Street
 
 
 ## Note
