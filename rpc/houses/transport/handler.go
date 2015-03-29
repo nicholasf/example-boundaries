@@ -2,7 +2,7 @@ package transport
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/nicholasf/example/boundaries"
+	"github.com/nicholasf/example/rpc/boundaries"
 )
 
 func MapRoutes(r *gin.RouterGroup, u boundaries.Houses) *gin.RouterGroup {

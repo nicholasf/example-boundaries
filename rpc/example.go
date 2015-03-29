@@ -2,8 +2,8 @@ package main
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/nicholasf/example/boundaries"
-	"github.com/nicholasf/example/boundaries/factories"
+	"github.com/nicholasf/example/rpc/boundaries"
+	"github.com/nicholasf/example/rpc/boundaries/factories"
 )
 
 type ExampleApp interface {

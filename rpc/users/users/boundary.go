@@ -3,7 +3,7 @@ package users
 import (
 	"net/rpc"
 
-	"github.com/nicholasf/example/users/context/models"
+	"github.com/nicholasf/example/rpc/users/context/models"
 )
 
 type Users struct {

@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/nicholasf/example/users/context/models"
+	"github.com/nicholasf/example/rpc/users/context/models"
 )
 
 type UsersService struct {

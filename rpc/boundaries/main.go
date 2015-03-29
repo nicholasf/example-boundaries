@@ -1,8 +1,8 @@
 package boundaries
 
 import (
-	houseModels "github.com/nicholasf/example/houses/context/models"
-	userModels "github.com/nicholasf/example/users/context/models"
+	houseModels "github.com/nicholasf/example/rpc/houses/context/models"
+	userModels "github.com/nicholasf/example/rpc/users/context/models"
 )
 
 type Houses interface {

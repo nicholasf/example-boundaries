@@ -1,8 +1,8 @@
 package houses
 
 import (
-	"github.com/nicholasf/example/houses/context/models"
-	"github.com/nicholasf/example/boundaries"
+	"github.com/nicholasf/example/rpc/houses/context/models"
+	"github.com/nicholasf/example/rpc/boundaries"
 	"errors"
 	"fmt"
 	"log"
