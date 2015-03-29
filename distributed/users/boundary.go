@@ -1,7 +1,7 @@
 package users
 
 import (
-	"github.com/nicholasf/example/users/context/models"
+	"github.com/nicholasf/example/distributed/users/context/models"
 	"errors"
 	"fmt"
 	"log"

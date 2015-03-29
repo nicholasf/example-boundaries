@@ -1,8 +1,8 @@
 package houses
 
 import (
-	"github.com/nicholasf/example/houses/context/models"
-	"github.com/nicholasf/example/boundaries"
+	"github.com/nicholasf/example/monolith/houses/context/models"
+	"github.com/nicholasf/example/monolith/boundaries"
 	"errors"
 	"fmt"
 	"log"

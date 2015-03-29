@@ -3,7 +3,7 @@ package transport
 import (
 	"github.com/gin-gonic/gin"
 
-	"github.com/nicholasf/example/boundaries"
+	"github.com/nicholasf/example/monolith/boundaries"
 )
 
 func MapRoutes(r *gin.RouterGroup, u boundaries.Users) *gin.RouterGroup {

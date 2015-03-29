@@ -1,7 +1,7 @@
 package models
 
 import (
-	userModels "github.com/nicholasf/example/users/context/models"
+	userModels "github.com/nicholasf/example/distributed/users/context/models"
 )
 
 type House struct {

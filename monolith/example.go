@@ -1,8 +1,8 @@
 package main
 
 import(
-	"github.com/nicholasf/example/boundaries"
-	"github.com/nicholasf/example/boundaries/factories"
+	"github.com/nicholasf/example/monolith/boundaries"
+	"github.com/nicholasf/example/monolith/boundaries/factories"
 	"github.com/gin-gonic/gin"
 )
 
