@@ -1,9 +1,9 @@
 package main
 
-import(
+import (
+	"github.com/gin-gonic/gin"
 	"github.com/nicholasf/example/boundaries"
 	"github.com/nicholasf/example/boundaries/factories"
-	"github.com/gin-gonic/gin"
 )
 
 type ExampleApp interface {
@@ -13,16 +13,16 @@ type ExampleApp interface {
 
 type exampleApp struct {
 	houses boundaries.Houses
-	users boundaries.Users
+	users  boundaries.Users
 }
 
 func NewExampleApp() ExampleApp {
-	users := factories.NewUsers()
+	users := factories.NewUsers(":3000")
 	houses := factories.NewHouses(users)
 
 	return &exampleApp{
 		houses: houses,
-		users: users,
+		users:  users,
 	}
 }
 
